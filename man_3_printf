@@ -1,0 +1,33 @@
+.TH man 1 "29 July 2019" "0.32" "printf man page"
+.SH NAME
+.B Printf
+- print any argument that passes through
+.SH SYNOPSIS
+#include <holberton.h>
+
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT. Format is the string that contains the text to be written to stdout. Its tag prototype is %[flags]specifier.
+
+Specifier:
+
+c - character
+
+d or i - signed decimal integer
+
+s - string of characters
+
+% - a single %
+.SH EXAMPLES
+{ int num = 21;
+
+printf("My favorite number is %d", num);}
+
+The ARGUMENT is num and the FORMAT is %d.
+
+.SH SEE ALSO
+.I printf
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Sergio Lopez and Hanh Nguyen
