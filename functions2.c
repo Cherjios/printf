@@ -11,10 +11,10 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
-  *print_c: main entry, helper function, print character
-  *@args- arguments from the list
+  *print_c - Main entry, helper function, print character
+  *@args: Arguments from the list
   *
-  *return- the number of character printed, excluding the null byte.
+  *Return: The number of character printed, excluding the null byte.
   */
 int print_c(va_list args)
 {
@@ -23,10 +23,10 @@ int print_c(va_list args)
 }
 
 /**
-  *print_s: main entry, helper function, print string
-  *@args- arguments from the list
+  *print_s - Main entry, helper function, print string
+  *@args: Arguments from the list
   *
-  *return- the number of character printed, excluding the null byte.
+  *Return: The number of character printed, excluding the null byte.
   */
 int print_s(va_list args)
 {
@@ -47,10 +47,10 @@ int print_s(va_list args)
 }
 
 /**
-  *print_mod: main entry, helper function, print percent sign
-  *@args- arguments from the list
+  *print_mod- main entry, helper function, print percent sign
+  *@args: arguments from the list
   *
-  *return- the number of character printed, excluding the null byte.
+  *Return: The number of character printed, excluding the null byte.
   */
 int print_mod(va_list args)
 {
@@ -59,55 +59,4 @@ int print_mod(va_list args)
 	return (1);
 }
 
-/**
-  *print_i: main entry, helper function, print integer
-  *@args- arguments from the list
-  *
-  *return- the number of character printed, excluding the null byte.
-  */
-/*
-int print_i(va_list args)
-{
-	int n = va_arg(args, int);
-	int j = 0;
-
-	if (n > 9)
-	{
-		print_i(n / 10);
-		j += _putchar(n % 10 + '\0');
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		print_i(n / -10);
-		j += _putchar(n % 10 + '\0');
-	}
-	return (j);
-}
-
-**
-  *print_d: main entry, helper function, print digit
-  *@args- arguments from the list
-  *
-  *return- the number of character printed, excluding the null byte.
-  */
-/*
-int print_d(va_list args, int)
-{
-	int n = va_arg(args, int);
-	int j = 0;
-
-	if (n > 9)
-	{
-		print_d(n / 10);
-		j += _putchar(n % 10 + '\0');
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		print_d(n / -10);
-		j += _putchar(n % 10 + '\0');
-	return (j);
-}
-*/
 
