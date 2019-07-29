@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		i++;
-		if (format[j])
+		if (data_t[j].type == NULL)
 		{
 			counter += _putchar('%');
 			counter += _putchar(format[i]);
