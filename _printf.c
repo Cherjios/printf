@@ -16,9 +16,9 @@ int _printf(const char *format, ...)
 			{"s", print_s},
 			{"%", print_mod},
 			{NULL, NULL}
-			};	
+			};
 	va_start(args, format);
-	
+
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format && format[i]; i++)
@@ -35,6 +35,11 @@ int _printf(const char *format, ...)
 				counter += data_t[j].f(args);
 				break;
 			}
+			if(*data_t[j].type != format[i + 1])
+			{
+				_putchar(format[i + 1]);
+				break;
+			}		
 		}
 		i++;
 		if (data_t[j].type == NULL)
