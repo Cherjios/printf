@@ -35,11 +35,6 @@ int _printf(const char *format, ...)
 				counter += data_t[j].f(args);
 				break;
 			}
-			if(*data_t[j].type != format[i + 1])
-			{
-				_putchar(format[i + 1]);
-				break;
-			}		
 		}
 		i++;
 		if (data_t[j].type == NULL)
