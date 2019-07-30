@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 			{"c", print_c},
 			{"s", print_s},
 			{"%", print_mod},
+			{"i", print_i},
+			{"d", print_d},
 			{NULL, NULL}
 			};
 	/* initialize valist for num number or argument*/
