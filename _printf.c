@@ -16,10 +16,9 @@ int _printf(const char *format, ...)
 			{"s", print_s},
 			{"%", print_mod},
 			{NULL, NULL}
-			};
-	/* initialize valist for num number or argument*/
+			};	
 	va_start(args, format);
-	/* access all the argument assigned to valist*/
+	
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format && format[i]; i++)
