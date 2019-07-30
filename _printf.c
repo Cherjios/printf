@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 		counter += _putchar(format[i]);
 		continue;
 		}
+		if (format[i + 1] == '\0')
+			return (-1);
 		for (j = 0; data_t[j].type; j++)
 		{
 			if (*data_t[j].type == format[i + 1])
