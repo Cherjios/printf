@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	unsigned int i = 0, j = 0, counter = 0;
+	 int i = 0, j = 0, counter = 0;
 
 	format_opt data_t[] = {
 			{"c", print_c},
