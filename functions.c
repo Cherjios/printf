@@ -9,7 +9,7 @@
  */
 int print_c(va_list args)
 {
-	_putchar(va_arg(args, int));
+	_putchar((unsigned char) va_arg(args, int));
 	return (1);
 }
 /**
@@ -28,7 +28,7 @@ int print_s(va_list args)
 	if (str == NULL)
 		str = "(null)";
 
-	for (i = 0; str[i] != '\0'; str++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
@@ -58,8 +58,8 @@ int print_mod(va_list args)
 int print_i(va_list args)
 {
 	int j = 0;
-
 	int n = va_arg(args, int);
+
 	j = print_number(n);
 	return (j);
 }
@@ -72,9 +72,9 @@ int print_i(va_list args)
  */
 int print_d(va_list args)
 {
-        int j = 0;
+	int j = 0;
+	int n = va_arg(args, int);
 
-        int n = va_arg(args, int);
-        j = print_number(n);
-        return (j);
+	j = print_number(n);
+	return (j);
 }
