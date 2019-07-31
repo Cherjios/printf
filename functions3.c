@@ -3,8 +3,7 @@
  * _putchar - writes the character c to stdout
  * @c: The character to print
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: On success 1. On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c)
 {
@@ -38,14 +37,13 @@ int print_number(int n)
 		j += _putchar(n % 10 + '0');
 	}
 	return (j);
-
 }
 
 /**
  * rot13 - helper function, print every 13th letters of the alphabet
  * @args: argument
- *
  * Description: encode a string using rot13
+ *
  * Return: return the number of digit printed
  */
 int rot_13(va_list args)
@@ -82,8 +80,8 @@ int rot_13(va_list args)
 /**
  * print_rev - entry point
  * @args: arguments
- *
  * Description: print a string in reverse
+ *
  * Return: the number of digit printed
  */
 int print_rev(va_list args)
