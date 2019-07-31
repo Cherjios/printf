@@ -12,22 +12,12 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, counter = 0;
 
 	format_opt data_t[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"%", print_mod}
-		{"i", print_i},
-		{"d", print_d},
-		{"R", rot_13},
-		{"r", print_rev},
-		{"u", print_deci},
-		{"b", print_binary},
-		{"o", print_octal},
-		{"x", print_hexa},
-		{"X", print_hexa_UP},,
-		{NULL, NULL}
+		{"c", print_c}, {"s", print_s}, {"%", print_mod}, {"i", print_i},
+		{"d", print_d}, {"R", rot_13}, {"r", print_rev}, {"u", print_deci},
+		{"b", print_binary}, {"o", print_octal}, {"x", print_hexa},
+		{"X", print_hexa_UP}, {NULL, NULL}
 	};
 	va_start(args, format);
-
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format && format[i]; i++)
