@@ -43,8 +43,7 @@ int _printf(const char *format, ...)
 		{
 			if (_putchar(format[i]) < 0 || _putchar(format[i + 1]) < 0)
 				return (-1);
-			counter += 2;
-		}
+			counter += 2; }
 		i++;
 	}
 	va_end(args);

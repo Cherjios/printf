@@ -11,6 +11,7 @@ int _printf(const char *format, ...);
 *struct format-struct format
 *@type: The format data
 *@f: The function associated
+*
 */
 
 typedef struct format
