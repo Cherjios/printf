@@ -11,11 +11,25 @@ Print ARGUMENT(s) according to FORMAT. Format is the string that contains the te
 
 Specifier:
 
+b - binary numbers
+
 c - character
 
 d or i - signed decimal integer
 
+o - unsigned octal
+
+R - rotation at the 13th letter of the alphabet
+
+r - reversed string
+
 s - string of characters
+
+u - unsigned decimal integer
+
+x - unsigned hexadecimal integer
+
+X - unsigned hexadecimal integer (uppercase)
 
 % - a single %
 .SH EXAMPLES
