@@ -23,18 +23,24 @@ int print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		if (_putchar('-') < 0)
+			return (-1);
+		j++;
 		if (n < -9)
 		{
 			j += print_number(n / -10);
 		}
-		j += _putchar(-(n % 10) + '0');
+		if (_putchar(-(n % 10) + '0') < 0)
+			return (-1);
+		j++;
 	}
 	if (n >= 0)
 	{
 		if (n > 9)
 			j += print_number(n / 10);
-		j += _putchar(n % 10 + '0');
+		if (_putchar(n % 10 + '0') < 0)
+			return (-1);
+		j++;
 	}
 	return (j);
 }
