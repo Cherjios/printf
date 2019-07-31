@@ -2,22 +2,11 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ *print_c - Main entry, helper function, print character
+ *@args: Arguments from the list
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ *Return: The number of character printed, excluding the null byte.
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
-  *print_c - Main entry, helper function, print character
-  *@args: Arguments from the list
-  *
-  *Return: The number of character printed, excluding the null byte.
-  */
 int print_c(va_list args)
 {
 	_putchar(va_arg(args, int));
@@ -60,3 +49,32 @@ int print_mod(va_list args)
 	return (1);
 }
 
+/**
+ *print_i - main entry, helper function, print integer
+ *@args: arguments from the list
+ *
+ *Return: the number of character printed, excluding the null byte.
+ */
+int print_i(va_list args)
+{
+	int j = 0;
+
+	int n = va_arg(args, int);
+	j = print_number(n);
+	return (j);
+}
+
+/**
+ *print_d - main entry, helper function, print digit
+ *@args: arguments from the list
+ *
+ *Return: the number of character printed, excluding the null byte.
+ */
+int print_d(va_list args)
+{
+        int j = 0;
+
+        int n = va_arg(args, int);
+        j = print_number(n);
+        return (j);
+}
