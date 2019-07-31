@@ -24,7 +24,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			counter += _putchar(format[i]);
+			if (_putchar(format[i]) < 0)
+				return (-1);
+			counter++;
 			continue;
 		}
 		if (format[i + 1] == '\0')
@@ -39,8 +41,9 @@ int _printf(const char *format, ...)
 		}
 		if (data_t[j].type == NULL)
 		{
-			counter += _putchar(format[i]);
-			counter += _putchar(format[i + 1]);
+			if (_putchar(format[i]) < 0 || _putchar(format[i + 1]) < 0)
+				return (-1);
+			counter += 2;
 		}
 		i++;
 	}
