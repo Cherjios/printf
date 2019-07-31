@@ -14,7 +14,16 @@ int _printf(const char *format, ...)
 	format_opt data_t[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_mod},
+		{"%", print_mod}
+		{"i", print_i},
+		{"d", print_d},
+		{"R", rot_13},
+		{"r", print_rev},
+		{"u", print_deci},
+		{"b", print_binary},
+		{"o", print_octal},
+		{"x", print_hexa},
+		{"X", print_hexa_UP},,
 		{NULL, NULL}
 	};
 	va_start(args, format);
