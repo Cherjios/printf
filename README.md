@@ -1,6 +1,6 @@
-_printf 
+# _printf 
 
-Project details:
+## Project details:
 
 Write your own printf function.
 
