@@ -73,4 +73,5 @@ $ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 
 ## Authors
 
-Hanh Nguyen and Sergio Lopez
+[Hanh Nguyen](git@github.com:Cherjios/printf.git)
+[Sergio Lopez](https://github.com/Cherjios)
